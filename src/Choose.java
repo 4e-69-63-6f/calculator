@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class Choose {
+    Calculation calc = new Calculation();
+    
     //process user-input
-    public static void choice(int input) {
+    public void choice(int input) {
         Scanner scanner = new Scanner(System.in);
         String aInput, bInput, cInput, gInput, hInput, rInput;
         final String areaRecPara = "areaRecPara";
@@ -11,90 +13,97 @@ public class Choose {
         final String areaTriangle = "areaTriangle";
         final String volumeCuboid = "volumeCuboid";
         final String volumeCube = "volumeCube";
-        final String volumePrism = "volumePrism";
         final String volumeCone = "volumeCone";
         final String volumeCylinder = "volumeCylinder";
+        final String a = "Indicate value \"a\": ";
+        final String b = "Indicate value \"b\": ";
+        final String c = "Indicate value \"c\": ";
+        final String G = "Indicate value \"G\": ";
+        final String g = "Indicate value \"g\": ";
+        final String h = "Indicate value \"h\": ";
+        final String hk = "Indicate value \"hĸ\": ";
+        final String r = "Indicate value \"r\": ";
 
         if (input == 1) {
-            System.out.print("Indicate value \"a\": ");
+            System.out.print(a);
             aInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"b\": ");
+            System.out.print("\n" + b);
             bInput = scanner.nextLine();
-            Calculation.twoVariables(aInput, bInput, areaRecPara);
+            calc.twoVariables(aInput, bInput, areaRecPara);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 2) {
-            System.out.print("Indicate value \"a\": ");
+            System.out.print(a);
             aInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"c\": ");
+            System.out.print("\n" + c);
             cInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"h\": ");
+            System.out.print("\n" + h);
             hInput = scanner.nextLine();
-            Calculation.threeVariables(aInput, cInput, hInput, areaTrapezoid);
+            calc.threeVariables(aInput, cInput, hInput, areaTrapezoid);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 3) {
-            System.out.print("Indicate value \"a\": ");
+            System.out.print(a);
             aInput = scanner.nextLine();
-            Calculation.oneVariable(aInput, areaSquare);
+            calc.oneVariable(aInput, areaSquare);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 4) {
-            System.out.print("Indicate value \"g\": ");
+            System.out.print(g);
             gInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"h\": ");
+            System.out.print("\n" + h);
             hInput = scanner.nextLine();
-            Calculation.twoVariables(gInput, hInput, areaRecPara);
+            calc.twoVariables(gInput, hInput, areaRecPara);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 5) {
-            System.out.print("Indicate value \"g\": ");
+            System.out.print(g);
             gInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"h\": ");
+            System.out.print("\n" + h);
             hInput = scanner.nextLine();
-            Calculation.twoVariables(gInput, hInput, areaTriangle);
+            calc.twoVariables(gInput, hInput, areaTriangle);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 6) {
-            System.out.print("Indicate value \"a\": ");
+            System.out.print(a);
             aInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"b\": ");
+            System.out.print("\n" + b);
             bInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"c\": ");
+            System.out.print("\n" + c);
             cInput = scanner.nextLine();
-            Calculation.threeVariables(aInput, bInput, cInput, volumeCuboid);
+            calc.threeVariables(aInput, bInput, cInput, volumeCuboid);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 7) {
-            System.out.print("Indicate value \"a\": ");
+            System.out.print(a);
             aInput = scanner.nextLine();
-            Calculation.oneVariable(aInput, volumeCube);
+            calc.oneVariable(aInput, volumeCube);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 8) {
-            System.out.print("Indicate value \"G\": ");
+            System.out.print(G);
             gInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"hĸ\": ");
+            System.out.print("\n" + hk);
             hInput = scanner.nextLine();
-            Calculation.twoVariables(gInput, hInput, volumePrism);
+            calc.twoVariables(gInput, hInput, areaRecPara);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 9) {
-            System.out.print("Indicate value \"r\": ");
+            System.out.print(r);
             rInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"h\": ");
+            System.out.print("\n" + h);
             hInput = scanner.nextLine();
-            Calculation.twoVariables(rInput, hInput, volumeCone);
+            calc.twoVariables(rInput, hInput, volumeCone);
 
-            Calculation.cont();
+            calc.cont();
         } else if (input == 10) {
-            System.out.print("Indicate value \"r\": ");
+            System.out.print(r);
             rInput = scanner.nextLine();
-            System.out.print("\nIndicate value \"h\": ");
+            System.out.print("\n" + h);
             hInput = scanner.nextLine();
-            Calculation.twoVariables(rInput, hInput, volumeCylinder);
+            calc.twoVariables(rInput, hInput, volumeCylinder);
 
-            Calculation.cont();
+            calc.cont();
         }
         else if (input == 0) {
             System.out.println("Exit Application!");

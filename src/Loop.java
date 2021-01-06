@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
 public class Loop {
-
     //Program-Loop an record user-input
-    public static void programLoop() {
+    public void programLoop() {
+        Choose choose = new Choose();
+        Calculation calc = new Calculation();
         Scanner scanner = new Scanner(System.in);
         int inputLoop = 1;
+        
         while (inputLoop != 0) {
             System.out.println("\nWhat do you want to calculate?");
             System.out.println("1 = Area: Rectangle");
@@ -30,9 +32,9 @@ public class Loop {
 
                 if (inputLoop < 0 || inputLoop > 10) {
                     System.err.println("Invalid Input!");
-                    Calculation.cont();
+                    calc.cont();
                 } else {
-                    Choose.choice(input);
+                    choose.choice(input);
                 }
             }catch (NumberFormatException ex) {
                 if ("Easter Egg".equals(inputString)) {
@@ -42,7 +44,7 @@ public class Loop {
                     break;
                 } else {
                     System.err.println("Invalid Input");
-                    Calculation.cont();
+                    calc.cont();
                 }
             }
         }
